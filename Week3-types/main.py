@@ -1,3 +1,5 @@
+import math
+
 whole_numbers = 10
 floating_point_numbers = 1.1
 bunch_of_text = "strings are lots of characters"
@@ -101,4 +103,9 @@ print(list_of_random_stuff[0], "got a score of:", list_of_random_stuff[2], "and 
 # these do the exact same thing, wow!
 print('{} got a score of: {:.2f} and some bonus: {:d}'.format(list_of_random_stuff[0],  list_of_random_stuff[2],  list_of_random_stuff[1]))
 print(f'{list_of_random_stuff[0]} got a score of: {list_of_random_stuff[2]:.2f} and some bonus: {list_of_random_stuff[1]:d}')
+
+value = int(input("Enter a number"))
+exponent = int(input("Enter an exponent"))
+
+print(f'{value}^{exponent} = {math.pow(value, exponent)}')
 
