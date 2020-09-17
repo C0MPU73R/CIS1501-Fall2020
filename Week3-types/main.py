@@ -80,5 +80,25 @@ print(grade_book)
 grade_book['Peter'] = 97
 print(grade_book)
 # delete/remove
-del grade_book['John']
+#del grade_book['John']
+grade_book.pop('John')
 print(grade_book)
+
+list_of_random_stuff = ['Eric', 10, 89.777, ['E', 'r', 'i', 'c']]
+
+print(list_of_random_stuff[0])
+print(list_of_random_stuff[1])
+print(list_of_random_stuff[2])
+print(list_of_random_stuff[3])
+
+list_of_random_stuff[3].append(' ')
+list_of_random_stuff[3].append('C')
+
+print(list_of_random_stuff[3])
+
+print(list_of_random_stuff[0], "got a score of:", list_of_random_stuff[2], "and some bonus:",list_of_random_stuff[1] )
+
+# these do the exact same thing, wow!
+print('{} got a score of: {:.2f} and some bonus: {:d}'.format(list_of_random_stuff[0],  list_of_random_stuff[2],  list_of_random_stuff[1]))
+print(f'{list_of_random_stuff[0]} got a score of: {list_of_random_stuff[2]:.2f} and some bonus: {list_of_random_stuff[1]:d}')
+
