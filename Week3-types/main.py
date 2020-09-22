@@ -109,3 +109,5 @@ exponent = int(input("Enter an exponent"))
 
 print(f'{value}^{exponent} = {math.pow(value, exponent)}')
 
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+print(alphabet[4], alphabet[17], alphabet[8], alphabet[2])
