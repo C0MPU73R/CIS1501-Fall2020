@@ -1,4 +1,5 @@
 import math
+import random
 
 credits_remaining = int(input("How many more credits do you need?"))
 
@@ -95,3 +96,95 @@ else:
 
 print("On Thursday, start with section 4.5 - boolean operators and membership operators")
 print("Don't forget the conditional operator")
+
+is_ready_for_class = True
+
+if is_ready_for_class:
+    print("Start taking notes?")
+
+age = int(input("How old are you?"))
+yearly_income = int(input("What's your yearly income?"))
+
+if age >= 18 and yearly_income >= 24000:
+    print("Here's your debt machine!")
+else:
+    print("Too risky!")
+
+if age >= 35 or yearly_income >= 60000:
+    print("Here's your debt machine!")
+else:
+    print("Too risky!")
+
+
+specials = ['Ham Sandwich', 'Turkey Soup', 'Chili']
+menu = {
+    'Ham Sandwich': 3.5,
+    'Turkey Soup': 3,
+    'Chili': 2,
+    'Hot Dog': 1,
+    'Coffee': 1.5
+}
+
+order = input("What do you want to buy from our amazing shop?")
+
+
+order_total = 0
+
+if order not in menu:
+    print("We don't sell that!")
+else:
+    order_total = menu[order]
+
+    if order in specials:
+        order_total -= .5
+
+    print("Enjoy your", order, "your cost is: $", order_total)
+
+name = 'Eric'
+your_name = input("Enter your name")
+another_name = your_name
+
+print( name is your_name )
+print( "id(name)", id(name))
+print( "id(your_name)", id(your_name))
+print( "id(another_name)", id(another_name))
+
+your_name = 'Eric C'
+print( "id(your_name)", id(your_name))
+print( "id(another_name)", id(another_name))
+
+print("Please excuse my modulus dear aunt sally!")
+print( 12 / 3 * 2 )
+
+
+temp = int(input("What's the temp?"))
+#if temp > 50:
+#    legwear = "shorts"
+#else:
+#    legwear = "pants"
+
+legwear = "shorts" if temp > 50 else "pants"
+
+print("based on the weather, you should wear", legwear)
+
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+print(random.randint(0, 9))
+
+# 5 5 5 5 - winning numbers
+# 5 5 5 4
+# 5 5 5 6
+# 5 5 4 5
+# 5 5 6 5
+# 5 4 5 5
+# 5 6 5 5
+# 4 5 5 5
+# 6 5 5 5
