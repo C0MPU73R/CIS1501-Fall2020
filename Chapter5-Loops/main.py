@@ -90,3 +90,6 @@ grade_book = {
 
 for key in grade_book:
     print(f"{key} has a score of: {grade_book[key]}")
+
+
+print("TODO - start with nested loops on Thursday")
