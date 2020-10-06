@@ -40,3 +40,6 @@ print(number_to_count_down_from)
 print(f'area of a 4x5 rectangle is {area_of_a_rectangle(4,5)}')
 
 print(f'area of a 4x5 rectangle is {area_of_a_rectangle("4",5)}')
+
+
+print("TODO for Thursday - start with Functions as Objections 6.8")
