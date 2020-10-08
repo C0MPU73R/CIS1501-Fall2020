@@ -28,7 +28,7 @@ def get_total_winnings(winning_ticket, user_ticket):
 
 def check_for_straight_win(winning_ticket, user_ticket):
     if winning_ticket == user_ticket:
-        return 1000
+        return 5000
     # else: - redundant
     return 0
 
@@ -60,18 +60,18 @@ total_spent = 0
 total_won = 0
 play_again = 'Y'
 
-while play_again == 'Y':
+while total_spent < 100_000:
     total_spent += 1
 
     winning_ticket = get_random_numbers()
 
-    if ask_player_for_easy_pick_or_manual() == "easy":
-        user_ticket = get_random_numbers()
-    else:
-        user_ticket = user_pick_numbers()
+    #if ask_player_for_easy_pick_or_manual() == "easy":
+    user_ticket = get_random_numbers()
+    #else:
+    #   user_ticket = user_pick_numbers()
 
     total_won += get_total_winnings(winning_ticket, user_ticket)
 
-    print(f'total spent: {total_spent} - total won: {total_won} -  net loss: {total_won-total_spent}')
+    print(f'total spent: ${total_spent:,d} - total won: ${total_won:,d} - profit: ${total_won-total_spent:,d}')
 
-    play_again = ask_to_play_again()
+    #play_again = ask_to_play_again()
