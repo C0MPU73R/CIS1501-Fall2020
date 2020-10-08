@@ -1,5 +1,6 @@
 import random
 
+
 def double_odds(some_list):
     for index in range(len(some_list)):
         if some_list[index] % 2 == 1:
