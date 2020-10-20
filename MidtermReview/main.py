@@ -58,12 +58,40 @@ def is_prime(n):
             return False
     return True
 
+
+def difference_of_primes_and_non_primes_through_n( number ):
+    sum = 0
+    for n in range(1, number+1):
+        if is_prime(n):
+            sum += n
+        else:
+            sum -= n
+    return sum
+
+
+def sum_of_primes_in_prime_indexes( some_list ):
+    sum = 0
+    for index in range(len(some_list)):
+        if is_prime(index) and is_prime(some_list[index]):
+            sum += some_list[index]
+    return sum
+
+
+def sum_of_values_in_prime_indexes( some_list ):
+    sum = 0
+    for index in range(len(some_list)):
+        if is_prime(index):
+            sum += some_list[index]
+    return sum
+
+
 def sum_of_primes_in_list( some_numbers ):
     sum = 0
     for number in some_numbers:
         if is_prime(number):
             sum += number
     return sum
+
 
 numbers = [ 2,3,4,5 ]
 
@@ -90,3 +118,37 @@ def count_vowels(sentence):
         if letter == 'y' and random.randint(1, 10) % 2 == 1:
             vowel_count += 1
     return vowel_count
+
+
+def bad_encryption( some_string ):
+    result = []
+    for index in range(len(some_string)):
+        result.append( ord(some_string[index]) + index )
+
+    return result
+
+
+def reverse_bad_encryption( some_list ):
+    result = ""
+    for index in range(len(some_list)):
+        result += chr(some_list[index] - index)
+    return result
+
+
+print(bad_encryption("midterm"))
+print(reverse_bad_encryption([109, 106, 102, 119, 105, 119, 115]))
+
+
+def check_if_all_letters_are_in_a_string( letters_to_check_for, string_to_check ):
+    for letter in letters_to_check_for:
+        if letter not in string_to_check:
+            return False
+    return True
+
+
+def ensure_none_of_the_letters_are_in_a_string( letters_to_check_for, string_to_check ):
+    for letter in letters_to_check_for:
+        if letter in string_to_check:
+            return False
+    return True
+
