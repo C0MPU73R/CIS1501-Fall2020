@@ -17,7 +17,7 @@ class Lamp:
         self._color = color
 
 
-class Sqaure:
+class Square:
 
     def __init__(self, length_in_centimeters):
         self._side_length = length_in_centimeters
@@ -46,9 +46,10 @@ class Sqaure:
         # shortcut - the efficent lazy way
         return not ( self == other or self < other )
 
+
 class Can:
 
-    def __init__(self, ounces):
+    def __init__(self, ounces=0):
         if ounces < 0:
             ounces = 0
         self._total_volume_in_ounces = ounces
@@ -83,9 +84,10 @@ def print_square_info(square):
     print(f'This square has a perimeter of {square.get_perimeter()} cm')
     print(f'This square has an area of {square.get_area()} cm^2')
 
-small_square = Sqaure(2)
+
+small_square = Square(2)
 print_square_info(small_square)
-big_square = Sqaure(234)
+big_square = Square(234)
 print_square_info(big_square)
 print(small_square)
 
