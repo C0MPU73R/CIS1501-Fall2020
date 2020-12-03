@@ -1,9 +1,12 @@
+from maze_solver import Maze_Solver
+
+
 def count_down(number):
     print(number)
     if number > 0:
         count_down(number-1)
 
-count_down(10)
+#count_down(10)
 
 
 def bad_fib(nth):
@@ -38,6 +41,18 @@ def fib_iteratively(nth):
     return current + previous
 
 
-print("FIB!!!")
-for number in range(40):
-    print(f'{number:2}', ":", better_fib(number), fib_iteratively(number))
+#print("FIB!!!")
+#for number in range(40):
+#    print(f'{number:2}', ":", better_fib(number), fib_iteratively(number))
+
+
+
+maze = [
+    ['S', ' ', ' ', 'X'],
+    [' ', 'X', ' ', 'X'],
+    [' ', ' ', ' ', 'X'],
+    [' ', 'X', ' ', 'E']
+]
+
+my_maze = Maze_Solver(maze)
+my_maze.solve()
